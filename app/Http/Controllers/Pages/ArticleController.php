@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Pages;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Article;
+use App\User;
+use App\Model\Comments;
 // use App\Http\Requests\StoreArticleRequest;
 
 class ArticleController extends Controller
@@ -22,8 +24,8 @@ class ArticleController extends Controller
         // $article->content = "Content bai viet so 3";
         // $article->save();
         
-        $articles = Article::paginate(10);
-        return view('layout.main')->with('articles', $articles);
+        // $articles = Article::paginate(10);
+        // return view('layout.main')->with('articles', $articles);
     }
 
     /**
@@ -46,7 +48,9 @@ class ArticleController extends Controller
     {
         $article = new Article();
         $article->title = $request->title;
+        $article->preface = $request->preface;
         $article->content = $request->content;
+        
         $article->save();
         return redirect()->route('editor.index');
 
@@ -60,7 +64,10 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+        $article = Article::find($id);
+        $user = new User();
+        $comments = new Comments();
+        return view('layout.article-master')->with('user', $user)->with('article', $article)->with('comments', $comments);
     }
 
     /**

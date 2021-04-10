@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Model\Article;
+
 
 class HomesController extends Controller
 {
@@ -14,7 +16,8 @@ class HomesController extends Controller
      */
     public function index()
     {
-        return view('layout.main');
+        $articles = Article::paginate(10);
+        return view('layout.main')->with('articles', $articles);
     }
 
     /**
@@ -46,7 +49,10 @@ class HomesController extends Controller
      */
     public function show($id)
     {
-        //
+        // $article = Article::find($id);
+        // $user = new User();
+        // $comments = new Comments();
+        // return view('layout.article-master')->with('user', $user)->with('article', $article)->with('comments', $comments);
     }
 
     /**

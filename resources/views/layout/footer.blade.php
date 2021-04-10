@@ -1,39 +1,39 @@
-<footer id="footer" class="footer">
-    <div class="container" id="content-footer">
-        <div class="box">
-            <h5>Theo dõi Blog</h5>
-                <ul>
-                    <li><a href="">Trang chủ facebook</a></li>
-                    <li><a href="">Facebook cá nhân</a></li>
-                </ul>
-            </div>
-
-        <div class="box">
-            <h5>Bạn bè</h5>
-                <ul>
-                    {{-- <li><a href="">Trang chủ facebook</a></li>
-                    <li><a href="">Facebook cá nhân</a></li>
-                    <li><a href="">Trang chủ facebook</a></li>
-                    <li><a href="">Trang chủ facebook</a></li> --}}
-                </ul>
-        </div>
-        <div class="box">
-            <h5>Chia sẻ</h5>
-                <ul>
-                    {{-- <li><a href="">Trang chủ facebook</a></li>
-                    <li><a href="">Facebook cá nhân</a></li>
-                    <li><a href="">Trang chủ facebook</a></li>
-                    <li><a href="">Trang chủ facebook</a></li> --}}
-                </ul>
-        </div>
-        <div class="box">
-            <h5>Kêt nối </h5>
-                <ul>
-                    <li><a href="">Twitter của tôi</a></li>
-                    <li><a href="">Instagram của tôi</a></li>
-                    <li><a href="">Facebook của tôi</a></li>
-                </ul>
-        </div>
-        <div class="clear"></div>
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
     </div>
-</footer>
+    <!-- Grid container -->
+  </footer>

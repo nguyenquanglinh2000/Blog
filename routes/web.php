@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/home', 'Pages\HomesController')->only('index');
 Route::resource('/author', 'Pages\AuthorController');
-Route::resource('/', 'Pages\ArticleController');
+Route::resource('/', 'Pages\HomesController');
+Route::resource('/article', 'Pages\ArticleController')->except('index');
+
 // Route::resource('/comments', 'Pages\CommentsController')->only('store','create');
 Route::get('/comments', 'Pages\CommentsController@store')->name('comments.store');
 Route::get('/comments/create', 'Pages\CommentsController@create')->name('comments.create');

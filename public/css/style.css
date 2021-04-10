@@ -2,16 +2,38 @@
     margin:0px;
     padding:0px;
 }
-
-#page-container {
+.title-page{
+    max-width: 100%;
+    max-height: 600px;
     position: relative;
-    /* min-height: 80vh; */
+    overflow: hidden;
 }
-  
+/* .background-video{
+    max-width: 100%;
+    max-height: 100%;
+} */
+#myVideo{
+    max-width: 100%;
+    max-height: 100%;
+}
+.title-blog{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: lavenderblush;
+}
+#header{
+    position: absolute;
+    z-index: 3;
+    font-family: 'Dancing Script', cursive;
+}
 .container {
-    width:50%;
     margin: auto;
     padding-top:6%;
+    font-family: 'EB Garamond', serif;
 }
  
 .navbar {
@@ -19,11 +41,20 @@
   background-color: black;
   position: fixed;
   top: 0;
-  width: 100%;
+  min-width: 100%;
+}
+.navbar h1{
+    color: whitesmoke;
+    font-size: 40px;
+}
+
+.navbar h1:hover{
+    color: rgb(0, 174, 255);
 }
 .navbar a:hover{
     color: rgb(0, 174, 255);
 }
+
  
 .list-menu a {
   float: left;
@@ -31,78 +62,29 @@
   color: white;
   padding: 14px 60px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
-.navbar h1{
-    color:white;
-    font-size: 25px;
-    
-}
-.top-content {
-    height: 350px;
-    background-position-y: 13px;
-    background-image: url("/img/logo.jpg"); 
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    padding: 200px 5px 50px;
-    color:white;
-    background-color: #0e0e0e;
-    
-}
-.title-top-content a{
+  
+.container  h2 a{
+    color: black;
+    font-size: 60px;
     text-decoration: none;
-    color:white;
-    font-weight: bold;
+    transition: color 1s;
 }
-#footer{
-    height: 300px;
-    background-color: #282828;
-    position: absolute; 
-    /* bottom: 0; */
-    width: 100%;
-    /* height: 2.5rem;   */
-}
-#content-footer{
-    color:white;
-    padding-top:30px;
-    margin-top :30px;
-}
-#content-footer ul{
-    list-style: none;
-}
-#content-footer a{
+.container  h2 a:hover{
+    color: rgb(0, 174, 255);
     text-decoration: none;
-    color:#757575 ;
 }
-#content-footer a:hover{
-        color:white; 
-}
-#content-footer .box{
-    width: 24%;
-    float: left;
-}
-.container {
-    max-width: 1000px;
-    margin: 0px auto;
+
+.container .content h4{
+    font-family: 'Prompt', sans-serif;
 }
 .title h1 a{
     text-decoration: none;
     color:black;
     font-weight: bold;
 }
-.button_open{
-    display: block;
-    clear: both;
-    width: 130px;
-    margin: .4375em 0 1.75em;
-    text-align: center;
-    background-color: cornflowerblue;
-    font-size: 20px;
-    padding: 10px 10px;
-    color:white;
-    border-radius: 4%;
-}
+
 ul li{
     list-style-type: none;
     float: right;
