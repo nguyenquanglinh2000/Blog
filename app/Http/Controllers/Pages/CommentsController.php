@@ -41,7 +41,7 @@ class CommentsController extends Controller
         $comments->id_user = $request->id_user;
         $comments->id_article = $request->id_article;
         $comments->save();
-        return redirect()->route('author.index');
+        return redirect()->back();
     }
 
     /**

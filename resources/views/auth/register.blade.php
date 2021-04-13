@@ -1,77 +1,79 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<!doctype html>
+<html>
+<head>
+<title>Đăng ký tài khoản Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Official Signup Form Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- fonts -->
+<link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+<!-- /fonts -->
+<!-- css -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/styless.css" rel='stylesheet' type='text/css' media="all" />
+<!-- /css -->
+</head>
+<body>
+<h1 class="w3ls">Đăng ký tài khoản Blog</h1>
+<div class="content-w3ls">
+	<div class="content-agile1">
+		<h2 class="agileits1">Blog cùi bắp</h2>
+		<p class="agileits2">Học hỏi, giao lưu và chia sẻ kiến thức</p>
+	</div>
+	<div class="content-agile2">
+		<form action="{{ route('register') }}" method="post">
+            @csrf
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+			<div class="form-control w3layouts"> 
+				<input type="text" id="firstname" name="name" placeholder="Họ tên" title="Please enter your First Name" required="">
+			</div>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+			<div class="form-control w3layouts">	
+				<input type="email" id="email" name="email" placeholder="mail@example.com" title="Please enter a valid email" required="">
+			</div>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+			<div class="form-control agileinfo">	
+				<input type="password" class="lock" name="password" placeholder="Password" id="password1" required="">
+			</div>	
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+			<div class="form-control agileinfo">	
+				<input type="password" class="lock" name="password_confirmation" placeholder="Confirm Password" id="password2" required="">
+			</div>			
+			
+			<input type="submit" class="register" value="Đăng ký">
+		</form>
+		<script type="text/javascript">
+			window.onload = function () {
+				document.getElementById("password1").onchange = validatePassword;
+				document.getElementById("password2").onchange = validatePassword;
+			}
+			function validatePassword(){
+				var pass2=document.getElementById("password2").value;
+				var pass1=document.getElementById("password1").value;
+				if(pass1!=pass2)
+					document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+				else
+					document.getElementById("password2").setCustomValidity('');	 
+					//empty string means no validation error
+			}
+		</script>
+        <div class="aitssendbuttonw3ls">
+            <p> Đăng nhập<span>→</span> <a class="w3_play_icon1" href="{{ route('login') }}"> Click Here</a></p>
+            <p><a class="w3_play_icon1" href="{{ route('index') }}">Go home</a></p>
         </div>
-    </div>
+		{{-- <p class="wthree w3l">Fast Signup With Your Favourite Social Profile</p>
+		<ul class="social-agileinfo wthree2">
+			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+		</ul> --}}
+	</div>
+	<div class="clear"></div>
 </div>
-@endsection
+<p class="copyright w3l">© Chúng ta ở đây - Chúng ta là bạn</p>
+</body>
+</html>

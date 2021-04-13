@@ -27,7 +27,6 @@
             </div>
             <div style=" margin:100px;"></div>
             @endforeach
-            @extends('layout.article.comment')
     </section>
 
 

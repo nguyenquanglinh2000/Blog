@@ -30,9 +30,11 @@
                         {!! $article->preface!!}
                     </h4>
                     <br/>
-                    <button type="button" class="btn btn-primary btn-floating" onclick="document.location='/article/{{$article->id}}'">
+                    {{-- <button type="button" class="btn btn-primary btn-floating" onclick="document.location='/article/{{$article->id}}'">
                         Tiếp tục đọc
-                    </button>
+                    </button> --}}
+    
+                    <a href="/article/{{$article->id}}" style="color: black;font-family: 'Prompt', sans-serif;">Tiếp tục đọc...</a>
                 </div>
                 <div style="border-bottom: 3px solid rgba(0,0,0,0.1);padding-top:10px"></div>
                 @endforeach

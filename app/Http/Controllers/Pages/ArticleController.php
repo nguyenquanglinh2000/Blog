@@ -65,8 +65,8 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = Article::find($id);
-        $user = new User();
-        $comments = new Comments();
+        $user = User::all();
+        $comments = Comments::all();
         return view('layout.article-master')->with('user', $user)->with('article', $article)->with('comments', $comments);
     }
 

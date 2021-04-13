@@ -25,46 +25,69 @@
     font-family: 'Dancing Script', cursive;
     color: lavenderblush;
 }
-#header{
-    position: absolute;
-    z-index: 3;
-    font-family: 'Dancing Script', cursive;
-}
+
 .container {
     margin: auto;
     padding-top:6%;
     font-family: 'EB Garamond', serif;
 }
- 
-.navbar {
-  overflow: hidden;
-  background-color: black;
-  position: fixed;
-  top: 0;
-  min-width: 100%;
+
+.header{
+    position: absolute;
+    z-index: 3;
+    font-family: 'Dancing Script', cursive;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    min-width: 100%;
 }
-.navbar h1{
+/* .header h1{
     color: whitesmoke;
     font-size: 40px;
+} */
+
+/* .header h1:hover{
+    color: rgb(0, 174, 255);
+} */
+/* .header a:hover{
+    color: rgb(0, 174, 255);
+} */
+.nav-link{
+    font-size: 30px;
 }
 
-.navbar h1:hover{
-    color: rgb(0, 174, 255);
+.button-login{
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
 }
-.navbar a:hover{
-    color: rgb(0, 174, 255);
+.button-logout{
+    font-size: 15px;
+    color: whitesmoke;
+    text-decoration: none;
 }
-
- 
+#icon-login{
+    position: relative;
+    top:0px;
+    right: 0px;
+}
+#icon-login .link-logout a :hover{
+    font-size: 50px;
+}
 .list-menu a {
   float: left;
   display: block;
   color: white;
-  padding: 14px 60px;
+  padding: 14px 30px;
   text-decoration: none;
   font-size: 20px;
 }
-  
+.list-menu{
+    float: left;
+    display: block;
+    color: white;
+  }
+
 .container  h2 a{
     color: black;
     font-size: 60px;
@@ -107,4 +130,9 @@ ul li{
     max-height:40px;
     width: auto;
     height: auto;
+}
+
+footer{
+    height: 150px;
+    background-color: black;
 }
