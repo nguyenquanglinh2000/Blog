@@ -29,7 +29,7 @@
 .container {
     margin: auto;
     padding-top:6%;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .header{
@@ -108,10 +108,10 @@
     font-weight: bold;
 }
 
-ul li{
+/* ul li{
     list-style-type: none;
     float: right;
-}
+} */
 .login-account{
     width: 200%;
 }
@@ -135,4 +135,7 @@ ul li{
 footer{
     height: 150px;
     background-color: black;
+}
+p{
+    font-size: 20px;
 }

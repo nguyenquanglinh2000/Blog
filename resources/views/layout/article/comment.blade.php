@@ -9,7 +9,7 @@
             <ol class="comment-list" style="list-style-type: none;">
                     <li id="">
                         <article id="" class="comment-body">
-                            <footer class="comment-meta">
+                            <div class="comment-meta">
                                 @foreach ($comments as $comment)
                                     @if ($comment->id != null)
                                         @if ($comment->id_article == $article->id)
@@ -28,7 +28,7 @@
                                                         {{$comment->created_at}}
                                                     </p>
                                                 </div>
-                                    </footer>
+                                            </div>
                                             <div class="comments-content">
                                                 <p>
                                                     {{$comment->content}}
@@ -44,8 +44,18 @@
             </ol>
         </div>
         
-        <div class="col-md-6">
-            <div class="comment-box">
+        <div class="col-md-9">
+            <div class="comment-box" style="border: 1px solid black;border-radius: 5px; padding:10px 10px">
+                @guest
+                    
+                @else
+                    <i class="fas fa-user-alt"></i>
+                    {{Auth::user()->name}}
+                    
+                @endguest
+                <br/>
+                <br/>
+                
                 <form action="{{ route('comments.store')}}" class="form-inline" method="GET">
                     @csrf
                     <div class="form-outline">

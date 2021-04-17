@@ -21,7 +21,7 @@ Route::resource('/article', 'Pages\ArticleController')->except('index');
 // Route::resource('/comments', 'Pages\CommentsController')->only('store','create');
 Route::get('/comments', 'Pages\CommentsController@store')->name('comments.store');
 Route::get('/comments/create', 'Pages\CommentsController@create')->name('comments.create');
-Route::resource('/editor', 'Pages\CKEditorController');
+Route::resource('/editor', 'Pages\CKEditorController')->only('index');
 Route::post('ckeditor/image_upload', 'Pages\CKEditorController@upload')->name('upload');
 
 
